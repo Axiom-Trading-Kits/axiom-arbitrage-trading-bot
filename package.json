@@ -1,0 +1,51 @@
+{
+  "name": "axiom-arbitrage-trading-bot",
+  "version": "1.0.0",
+  "description": "Axiom arbitrage trading bot — Solana cross-DEX, triangular, and CEX-DEX arbitrage scanner with risk controls, Axiom terminal integration, and dry-run execution",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "axiom-arb": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "cli": "tsx src/cli.ts",
+    "scan": "tsx src/cli.ts scan",
+    "scan:once": "tsx src/cli.ts scan --once",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint:types": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20.18.0"
+  },
+  "keywords": [
+    "axiom",
+    "arbitrage",
+    "solana",
+    "jupiter",
+    "dex",
+    "trading-bot",
+    "memecoin",
+    "cross-dex"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4",
+    "bs58": "^6.0.0",
+    "express": "^4.21.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.5",
+    "@types/supertest": "^7.2.0",
+    "ioredis-om": "^5.10.2",
+    "supertest": "^7.2.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.4"
+  }
+}
